@@ -3,6 +3,29 @@ const mainNav = document.getElementById("mainNav");
 const navLinks = document.querySelectorAll(".nav a");
 const statNumbers = document.querySelectorAll(".count");
 const contactForm = document.querySelector(".contact-form");
+const sectionsToReveal = document.querySelectorAll(".section, .page-hero, .hero");
+const themeToggle = document.getElementById("themeToggle");
+const siteHeader = document.querySelector(".site-header");
+
+const storedTheme = localStorage.getItem("encon-theme");
+if (storedTheme === "dark") {
+  document.body.classList.add("theme-dark");
+}
+
+const setThemeIcon = () => {
+  if (!themeToggle) return;
+  const isDark = document.body.classList.contains("theme-dark");
+  themeToggle.textContent = isDark ? "☀" : "🌙";
+  themeToggle.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
+};
+
+setThemeIcon();
+
+themeToggle?.addEventListener("click", () => {
+  document.body.classList.toggle("theme-dark");
+  localStorage.setItem("encon-theme", document.body.classList.contains("theme-dark") ? "dark" : "light");
+  setThemeIcon();
+});
 
 menuToggle?.addEventListener("click", () => {
   const expanded = menuToggle.getAttribute("aria-expanded") === "true";
@@ -15,6 +38,11 @@ navLinks.forEach((link) => {
     mainNav.classList.remove("open");
     menuToggle?.setAttribute("aria-expanded", "false");
   });
+});
+
+window.addEventListener("scroll", () => {
+  if (!siteHeader) return;
+  siteHeader.classList.toggle("header-scrolled", window.scrollY > 18);
 });
 
 const animateCounters = () => {
@@ -53,6 +81,26 @@ const awardsSection = document.getElementById("awards");
 if (awardsSection) {
   observer.observe(awardsSection);
 }
+
+sectionsToReveal.forEach((section) => {
+  section.classList.add("reveal-item");
+});
+
+const revealObserver = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+sectionsToReveal.forEach((section) => {
+  revealObserver.observe(section);
+});
 
 contactForm?.addEventListener("submit", (event) => {
   event.preventDefault();
