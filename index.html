@@ -13,9 +13,6 @@
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="logo" href="index.html">ENCON<span>Energy</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
       <nav class="nav" id="mainNav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -26,6 +23,12 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch theme">🌙</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -46,13 +49,44 @@
     </div>
   </section>
 
-  <section class="ticker">
+  <section class="section bg-light">
     <div class="container">
-      <div class="ticker-track">
-        <span>Happy New Year 2026</span>
-        <span>National Energy Conservation Awards 2025</span>
-        <span>ESG Rating Provider Registered with SEBI: IN/ERP/Category-II/0007</span>
-        <span>Inception Workshops in Agra, Howrah and Rajkot</span>
+      <p class="section-kicker">ENCON Information</p>
+      <h2>Save Energy = Save Money & Planet</h2>
+      <div class="service-grid">
+        <div class="service-item">ENCON Education and Research Foundation (EERF)</div>
+        <div class="service-item">Registered under Societies Registration Act, 1860</div>
+        <div class="service-item">Registered under Bombay Public Trust Act, 1950</div>
+        <div class="service-item">Accredited energy consultancy and audit support</div>
+        <div class="service-item">Power quality, harmonics, utility and system studies</div>
+        <div class="service-item">Renewable transition planning and implementation support</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section windmill-section" id="windmill">
+    <div class="container windmill-grid">
+      <div>
+        <p class="section-kicker">3D Live Animation</p>
+        <h2>Clean Energy in Motion</h2>
+        <p>
+          This live windmill animation symbolizes renewable transition and
+          continuous energy generation across modern sustainability projects.
+        </p>
+      </div>
+      <div class="windmill-scene" aria-hidden="true">
+        <div class="windmill">
+          <div class="tower"></div>
+          <div class="nacelle"></div>
+          <div class="hub"></div>
+          <div class="blades">
+            <span class="blade blade-1"></span>
+            <span class="blade blade-2"></span>
+            <span class="blade blade-3"></span>
+          </div>
+        </div>
+        <span class="cloud cloud-1"></span>
+        <span class="cloud cloud-2"></span>
       </div>
     </div>
   </section>
@@ -96,19 +130,15 @@
       <p class="section-kicker">Our Services & Associates</p>
       <h2>Comprehensive Sustainability Services</h2>
       <div class="service-grid">
-        <div class="service-item">ESG</div>
-        <div class="service-item">ACV (Accredited Carbon Verifier)</div>
-        <div class="service-item">Mandatory Energy Audit</div>
-        <div class="service-item">CCTS / PAT Consultancy</div>
-        <div class="service-item">Green Steel Certification</div>
-        <div class="service-item">ECBC Consultancy</div>
-        <div class="service-item">ESCO Service</div>
-        <div class="service-item">Harmonics</div>
-        <div class="service-item">Green Building</div>
-        <div class="service-item">Renewable Energy Solutions</div>
-        <div class="service-item">Investment Grade Energy Audits</div>
-        <div class="service-item">Thermography Audit</div>
-        <div class="service-item">Training and Seminars</div>
+        <div class="service-item">Mandatory / PAT Energy Audit</div>
+        <div class="service-item">Detailed Energy Audit (MEDA)</div>
+        <div class="service-item">Awareness and Training Programme</div>
+        <div class="service-item">Electrical Energy Audit</div>
+        <div class="service-item">Thermal Energy Audit</div>
+        <div class="service-item">HVAC and Water Audit</div>
+        <div class="service-item">Thermography and Green Audit</div>
+        <div class="service-item">Solar PV System Advisory</div>
+        <div class="service-item">Compressor Air Audit</div>
       </div>
     </div>
     <div class="container section-link-wrap">
@@ -190,9 +220,15 @@
         <h2>How We Support You?</h2>
         <p>Share your requirements and our team will connect with you.</p>
         <div class="office">
-          <h3>Head Office</h3>
-          <p>SCO 128, Sec-5, Mansa Devi Complex, Panchkula, Haryana 134114</p>
-          <p>0172-4605017, 9876121668</p>
+          <h3>Registered Address</h3>
+          <p>16/1385, Near Dr. Dhawale Residence, Ichalkaranji - 416115, Dist. Kolhapur (M.S., India)</p>
+          <p>Cell: 9916977370, 7020198026, 9422412664</p>
+          <p>Email: enconresearchfoundation@gmail.com</p>
+        </div>
+        <div class="office">
+          <h3>Leadership</h3>
+          <p>President: Dr. Sanjay A. Khot (7350542020)</p>
+          <p>CEO: Dr. Gargi H. Bargale (7020198026)</p>
         </div>
       </div>
       <form class="contact-form">
@@ -212,6 +248,10 @@
   <footer class="site-footer">
     <div class="container">
       <p>Copyright 2026 ENCON Energy</p>
+      <p class="footer-info">President: Dr. Sanjay A. Khot (7350542020) | CEO: Dr. Gargi H. Bargale (7020198026)</p>
+      <p class="footer-info">Address: 16/1385, Near Dr. Dhawale Residence, Ichalkaranji - 416115, Dist. Kolhapur (M.S., India)</p>
+      <p class="footer-info">Cell: 9916977370, 7020198026, 9422412664 | Email: enconresearchfoundation@gmail.com</p>
+      <p class="developed-by">Developed by Startnexsolutions</p>
       <a href="#top" id="scrollTop">Scroll to Top</a>
     </div>
   </footer>
